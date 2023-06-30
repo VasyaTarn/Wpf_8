@@ -27,13 +27,13 @@ namespace Wpf_8
 
         public double X
         {
-            get { return Math.Round(x, 2); }
+            get { return Math.Round(x, 0); }
             set { x = value; NotifyPropertyChanged(); }
         }
 
         public double Y
         {
-            get { return Math.Round(y, 2); }
+            get { return Math.Round(y, 0); }
             set { y = value; NotifyPropertyChanged(); }
         }
 
