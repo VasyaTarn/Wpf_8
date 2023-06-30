@@ -1,0 +1,18 @@
+﻿<Window x:Class="Wpf_8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas x:Name="canvas" Background="White">
+        <Rectangle Fill="Blue" Width="50" Height="50"
+                   Canvas.Left="{Binding X, Mode=TwoWay}" Canvas.Top="{Binding Y, Mode=TwoWay}"
+                   MouseLeftButtonDown="Cube_MouseLeftButtonDown" MouseLeftButtonUp="Cube_MouseLeftButtonUp" MouseMove="Cube_MouseMove" />
+        <TextBlock TextWrapping="Wrap" Text="X:" Canvas.Top="350" HorizontalAlignment="Center" Height="27" VerticalAlignment="Top" Width="25" FontSize="20" RenderTransformOrigin="0.407,0.071"/>
+        <TextBlock TextWrapping="Wrap" Text="Y:" Canvas.Top="378" HorizontalAlignment="Center" Height="27" VerticalAlignment="Top" Width="25" FontSize="20" RenderTransformOrigin="0.569,-0.125"/>
+        <TextBox x:Name="TextX" Canvas.Left="30" TextWrapping="Wrap" Text="{Binding X, Mode=TwoWay}" Canvas.Top="350" Width="80" HorizontalAlignment="Left" Height="28" VerticalAlignment="Center" FontSize="20" FontStyle="Italic"/>
+        <TextBox x:Name="TextY" Canvas.Left="30" TextWrapping="Wrap" Text="{Binding Y, Mode=TwoWay}" Canvas.Top="378" Width="80" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" FontSize="20" FontStyle="Italic"/>
+    </Canvas>
+</Window>
